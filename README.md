@@ -2,6 +2,8 @@
 
 Shared Robuust ESLint flat config with Airbnb-like stylistic defaults, implemented via `@stylistic/eslint-plugin`.
 
+See [CHANGELOG.md](./CHANGELOG.md) for release history.
+
 ## Install
 
 ```bash
@@ -26,5 +28,19 @@ export default [
       // project-specific overrides
     },
   },
+];
+```
+
+## Vue Addon
+
+For Vue projects, also include the Vue addon (Vue + Vue accessibility rules):
+
+```js
+import robuust from '@robuust-digital/eslint-config';
+import robuustVue from '@robuust-digital/eslint-config/vue';
+
+export default [
+  ...robuust,
+  ...robuustVue,
 ];
 ```
