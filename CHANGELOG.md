@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.4.0 - 2026-04-29
+
+### Added
+
+- Exported the shared stylistic rule set so the Vue addon can reuse the same formatting contract.
+
+### Changed
+
+- Applied the shared stylistic rules to `**/*.vue` files in `@robuust-digital/eslint-config/vue`.
+- Enforced semicolons, trailing commas, indentation, key spacing, and import spacing in Vue script blocks.
+
 ## 0.3.0 - 2026-02-23
 
 ### Added

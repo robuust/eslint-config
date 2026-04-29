@@ -1,9 +1,19 @@
+import stylistic from '@stylistic/eslint-plugin';
 import vue from 'eslint-plugin-vue';
 import vuejsAccessibility from 'eslint-plugin-vuejs-accessibility';
+
+import { stylisticRules } from './index.js';
 
 export default [
   ...vue.configs['flat/recommended'],
   ...vuejsAccessibility.configs['flat/recommended'],
+  {
+    files: ['**/*.vue'],
+    plugins: {
+      '@stylistic': stylistic,
+    },
+    rules: stylisticRules,
+  },
   {
     rules: {
       'vue/max-len': 'off',
