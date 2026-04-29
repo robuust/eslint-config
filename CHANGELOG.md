@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Applied the shared stylistic rules to `**/*.vue` files in `@robuust-digital/eslint-config/vue`.
-- Enforced semicolons, trailing commas, and single spacing inside import braces in Vue script blocks.
+- Enforced semicolons, trailing commas, indentation, key spacing, and import spacing in Vue script blocks.
 
 ## 0.3.0 - 2026-02-23
 

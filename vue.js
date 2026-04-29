@@ -4,15 +4,6 @@ import vuejsAccessibility from 'eslint-plugin-vuejs-accessibility';
 
 import { stylisticRules } from './index.js';
 
-const vueStylisticRules = {
-  '@stylistic/comma-dangle': stylisticRules['@stylistic/comma-dangle'],
-  '@stylistic/no-extra-semi': stylisticRules['@stylistic/no-extra-semi'],
-  '@stylistic/no-multi-spaces': stylisticRules['@stylistic/no-multi-spaces'],
-  '@stylistic/semi': stylisticRules['@stylistic/semi'],
-  '@stylistic/semi-spacing': stylisticRules['@stylistic/semi-spacing'],
-  '@stylistic/semi-style': stylisticRules['@stylistic/semi-style'],
-};
-
 export default [
   ...vue.configs['flat/recommended'],
   ...vuejsAccessibility.configs['flat/recommended'],
@@ -21,7 +12,7 @@ export default [
     plugins: {
       '@stylistic': stylistic,
     },
-    rules: vueStylisticRules,
+    rules: stylisticRules,
   },
   {
     rules: {
