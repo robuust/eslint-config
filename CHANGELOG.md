@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.5.0 - 2026-05-20
+
+### Added
+
+- Added the `@robuust-digital/eslint-config/typescript` export for syntax-only TypeScript linting.
+- Added `typescript-eslint` recommended flat config support for `**/*.{ts,tsx,mts,cts}` files.
+- Added TypeScript parser handoff for Vue SFC script blocks when the TypeScript addon is combined with the Vue addon.
+- Added `typescript` as an optional peer dependency for TypeScript consumers.
+
+### Changed
+
+- Applied the shared Robuust stylistic rules to TypeScript files.
+- Disabled `no-undef` for TypeScript files so TypeScript handles undefined symbols.
+- Documented JavaScript-only, JavaScript + TypeScript, and JavaScript + TypeScript + Vue usage.
+
 ## 0.4.0 - 2026-04-29
 
 ### Added
