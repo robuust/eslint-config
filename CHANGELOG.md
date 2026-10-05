@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.6.0 - 2026-10-05
+
+### Fixed
+
+- Added TypeScript declarations for the base, TypeScript, and Vue configs.
+
+### Changed
+
+- Updated ESLint, Vue, accessibility, TypeScript linting, and browser globals dependencies.
+- Raised the minimum supported TypeScript version to 5.3 for typed configs.
+
 ## 0.5.0 - 2026-05-20
 
 ### Added

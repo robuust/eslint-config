@@ -10,6 +10,9 @@ See [CHANGELOG.md](./CHANGELOG.md) for release history.
 yarn add -D eslint @robuust-digital/eslint-config
 ```
 
+Requires ESLint 10 or later. TypeScript projects require TypeScript `>=5.3.0 <6.1.0`.
+Type declarations are included for all config exports.
+
 ## Usage: JavaScript
 
 Create `eslint.config.js`:
