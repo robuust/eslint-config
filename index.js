@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import globals from 'globals';
+import importPlugin from 'eslint-plugin-import-x';
 
 export const stylisticRules = {
   '@stylistic/array-bracket-spacing': ['error', 'never'],
@@ -78,6 +79,17 @@ export const stylisticRules = {
 export default [
   js.configs.recommended,
   {
+    files: ['**/*.{js,mjs,cjs,ts,tsx,mts,cts,vue}'],
+    plugins: {
+      'import-x': importPlugin,
+    },
+    rules: {
+      'import-x/order': ['error', {
+        groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+      }],
+    },
+  },
+  {
     files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
     languageOptions: {
       ecmaVersion: 'latest',
@@ -92,6 +104,16 @@ export default [
     rules: {
       ...stylisticRules,
       'no-console': 'off',
+    },
+  },
+  {
+    files: ['**/*.config.{js,mjs,cjs,ts,mts,cts}'],
+    plugins: {
+      '@stylistic': stylistic,
+    },
+    rules: {
+      '@stylistic/array-bracket-newline': ['error', { multiline: true, minItems: 2 }],
+      '@stylistic/array-element-newline': ['error', { multiline: true, minItems: 2 }],
     },
   },
 ];

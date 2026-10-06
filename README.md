@@ -10,6 +10,9 @@ See [CHANGELOG.md](./CHANGELOG.md) for release history.
 yarn add -D eslint @robuust-digital/eslint-config
 ```
 
+Requires ESLint 10 or later. TypeScript projects require TypeScript `>=5.3.0 <6.1.0`.
+Type declarations are included for all config exports.
+
 ## Usage: JavaScript
 
 Create `eslint.config.js`:
@@ -68,3 +71,20 @@ export default [
   ...robuustVue,
 ];
 ```
+
+## Import ordering and config arrays
+
+The base config enforces `import-x/order` in JavaScript, TypeScript, and Vue files,
+using the groups `builtin`, `external`, `parent`, `sibling`, and `index`.
+TypeScript and Vue files still require their respective addons for parsing.
+`eslint-plugin-import-x` is included by this package.
+
+In `*.config.{js,mjs,cjs,ts,mts,cts}` files, arrays with two or more elements
+use one element per line. This includes Nuxt, Vite, Vitest, and ESLint configs. This applies to all element types, not just strings.
+Array formatting in other files is unchanged. Both conventions support ESLint
+`--fix`; import ordering preserves side-effect import boundaries.
+
+When upgrading from 0.5.x, update the package range to `^0.6.0` and refresh the
+lockfile. Remove redundant local `import/order` or `import-x/order` settings.
+Keep project-specific resolution, extension, and dependency checks locally,
+including their plugin registration and direct dependency when still used.

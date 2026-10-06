@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.5.0 - 2026-05-20
+## 0.6.0 (06-10-2026)
+
+### Fixed
+
+- Added TypeScript declarations for the base, TypeScript, and Vue configs.
+
+### Changed
+
+- Standardized import ordering across JavaScript, TypeScript, and Vue, and multiline arrays in config files.
+- Updated ESLint, Vue, accessibility, TypeScript linting, and browser globals dependencies.
+- Raised the minimum supported TypeScript version to 5.3 for typed configs.
+
+## 0.5.0 (20-05-2026)
 
 ### Added
 
@@ -17,7 +29,7 @@ All notable changes to this project will be documented in this file.
 - Disabled `no-undef` for TypeScript files so TypeScript handles undefined symbols.
 - Documented JavaScript-only, JavaScript + TypeScript, and JavaScript + TypeScript + Vue usage.
 
-## 0.4.0 - 2026-04-29
+## 0.4.0 (29-04-2026)
 
 ### Added
 
@@ -28,7 +40,7 @@ All notable changes to this project will be documented in this file.
 - Applied the shared stylistic rules to `**/*.vue` files in `@robuust-digital/eslint-config/vue`.
 - Enforced semicolons, trailing commas, indentation, key spacing, and import spacing in Vue script blocks.
 
-## 0.3.0 - 2026-02-23
+## 0.3.0 (23-02-2026)
 
 ### Added
 
@@ -39,7 +51,7 @@ All notable changes to this project will be documented in this file.
 
 - Moved Robuust Vue and accessibility rule overrides into the shared Vue addon.
 
-## 0.2.0 - 2026-02-23
+## 0.2.0 (23-02-2026)
 
 ### Added
 
@@ -52,7 +64,7 @@ All notable changes to this project will be documented in this file.
   - `eslint-plugin-vue`
   - `vue-eslint-parser`
 
-## 0.1.0 - 2026-02-23
+## 0.1.0 (23-02-2026)
 
 ### Added
 
