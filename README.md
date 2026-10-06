@@ -71,3 +71,20 @@ export default [
   ...robuustVue,
 ];
 ```
+
+## Import ordering and Nuxt arrays
+
+The base config enforces `import-x/order` in JavaScript, TypeScript, and Vue files,
+using the groups `builtin`, `external`, `parent`, `sibling`, and `index`.
+TypeScript and Vue files still require their respective addons for parsing.
+`eslint-plugin-import-x` is included by this package.
+
+In `nuxt.config.js` and `nuxt.config.ts`, arrays with two or more elements use
+one element per line. This applies to all element types, not just strings.
+Array formatting in other files is unchanged. Both conventions support ESLint
+`--fix`; import ordering preserves side-effect import boundaries.
+
+When upgrading from 0.5.x, update the package range to `^0.6.0` and refresh the
+lockfile. Remove redundant local `import/order` or `import-x/order` settings.
+Keep project-specific resolution, extension, and dependency checks locally,
+including their plugin registration and direct dependency when still used.

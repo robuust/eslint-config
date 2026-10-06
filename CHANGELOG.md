@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.6.0 - 2026-10-05
+## 0.6.0 - 2026-10-06
 
 ### Fixed
 
@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+- Standardized import ordering across JavaScript, TypeScript, and Vue, and multiline arrays in Nuxt configs.
 - Updated ESLint, Vue, accessibility, TypeScript linting, and browser globals dependencies.
 - Raised the minimum supported TypeScript version to 5.3 for typed configs.
 
