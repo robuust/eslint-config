@@ -107,7 +107,7 @@ export default [
     },
   },
   {
-    files: ['**/nuxt.config.{js,ts}'],
+    files: ['**/*.config.{js,mjs,cjs,ts,mts,cts}'],
     plugins: {
       '@stylistic': stylistic,
     },

@@ -72,15 +72,15 @@ export default [
 ];
 ```
 
-## Import ordering and Nuxt arrays
+## Import ordering and config arrays
 
 The base config enforces `import-x/order` in JavaScript, TypeScript, and Vue files,
 using the groups `builtin`, `external`, `parent`, `sibling`, and `index`.
 TypeScript and Vue files still require their respective addons for parsing.
 `eslint-plugin-import-x` is included by this package.
 
-In `nuxt.config.js` and `nuxt.config.ts`, arrays with two or more elements use
-one element per line. This applies to all element types, not just strings.
+In `*.config.{js,mjs,cjs,ts,mts,cts}` files, arrays with two or more elements
+use one element per line. This includes Nuxt, Vite, Vitest, and ESLint configs. This applies to all element types, not just strings.
 Array formatting in other files is unchanged. Both conventions support ESLint
 `--fix`; import ordering preserves side-effect import boundaries.
 
