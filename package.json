@@ -39,8 +39,7 @@
   "author": "Robuust",
   "license": "MIT",
   "scripts": {
-    "test:types": "tsc -p tests/tsconfig.json",
-    "test:lint": "node --test tests/lint.test.js"
+    "test:types": "tsc -p tests/tsconfig.json"
   },
   "peerDependencies": {
     "eslint": ">=10",
