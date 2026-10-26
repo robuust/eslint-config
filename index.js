@@ -77,7 +77,10 @@ export const stylisticRules = {
 };
 
 export default [
-  js.configs.recommended,
+  {
+    ...js.configs.recommended,
+    files: ['**/*.{js,mjs,cjs,ts,tsx,mts,cts,vue}'],
+  },
   {
     files: ['**/*.{js,mjs,cjs,ts,tsx,mts,cts,vue}'],
     plugins: {
