@@ -72,6 +72,41 @@ export default [
 ];
 ```
 
+## Usage: GraphQL
+
+Available from 0.7.0. When upgrading from 0.6.x, update the package range to
+`^0.7.0` and refresh the lockfile.
+
+Include the GraphQL addon after the base config and any TypeScript or Vue addons:
+
+```js
+import robuust from '@robuust-digital/eslint-config';
+import robuustGraphql from '@robuust-digital/eslint-config/graphql';
+
+export default [
+  ...robuust,
+  ...robuustGraphql,
+];
+```
+
+The addon lints standalone `.graphql` and `.gql` operations with
+`@graphql-eslint/eslint-plugin`. It requires named operations and rejects duplicate
+fields, arguments, and variables without requiring a schema.
+Schema-dependent validation, such as checking field names and types, is not enabled.
+
+Formatting uses Prettier through ESLint, with two-space indentation and a
+100-character print width. Run `eslint --fix` to format GraphQL files. The parser,
+GraphQL runtime, and formatter dependencies are included by this package.
+JavaScript, TypeScript, and Vue formatting continues to use the existing rules.
+
+Include GraphQL files in your project's lint command. For example, in Salta:
+
+```json
+{
+  "lint": "eslint resources/js resources/graphql --ext=.js,.vue,.graphql,.gql"
+}
+```
+
 ## Import ordering and config arrays
 
 The base config enforces `import-x/order` in JavaScript, TypeScript, and Vue files,

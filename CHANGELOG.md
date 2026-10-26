@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.7.0 (26-10-2026)
+
+### Added
+
+- Added the optional `@robuust-digital/eslint-config/graphql` export with TypeScript declarations.
+- Lint standalone `.graphql` and `.gql` operations for anonymous operations and duplicate fields, arguments, and variables without requiring a schema.
+- Format GraphQL files through ESLint `--fix` using Prettier, two-space indentation, and a 100-character print width.
+
+### Fixed
+
+- Limited recommended JavaScript rules to JavaScript, TypeScript, and Vue files so they do not run on GraphQL files.
+
 ## 0.6.0 (06-10-2026)
 
 ### Fixed
