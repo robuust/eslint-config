@@ -1,6 +1,6 @@
 {
   "name": "@robuust-digital/eslint-config",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Robuust shared ESLint flat config with stylistic defaults",
   "type": "module",
   "main": "index.js",
@@ -17,6 +17,10 @@
     "./vue": {
       "types": "./vue.d.ts",
       "default": "./vue.js"
+    },
+    "./graphql": {
+      "types": "./graphql.d.ts",
+      "default": "./graphql.js"
     }
   },
   "files": [
@@ -26,6 +30,8 @@
     "typescript.d.ts",
     "vue.js",
     "vue.d.ts",
+    "graphql.js",
+    "graphql.d.ts",
     "CHANGELOG.md",
     "README.md"
   ],
@@ -52,11 +58,13 @@
   },
   "dependencies": {
     "@eslint/js": "^10.0.1",
+    "@graphql-eslint/eslint-plugin": "^4.4.2",
     "@stylistic/eslint-plugin": "^5.10.0",
     "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-vue": "^10.11.1",
     "eslint-plugin-vuejs-accessibility": "^2.6.0",
     "globals": "^17.13.0",
+    "graphql": "^16.14.2",
     "typescript-eslint": "^8.71.0",
     "vue-eslint-parser": "^10.4.1"
   },
